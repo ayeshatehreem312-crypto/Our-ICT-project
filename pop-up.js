@@ -1,12 +1,13 @@
-const openBtn = document.getElementById("openModal");
-const closeBtn = document.getElementById("closeModal");
+const sendBtn = document.getElementById("sendBtn");
 const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("closeModal");
 
-openBtn.addEventListener("click", () => {
-  modal.classList.add("open");
+
+sendBtn.addEventListener("click", () => {
+    modal.classList.add("open");
 });
+
 
 closeBtn.addEventListener("click", () => {
-  modal.classList.remove("open");
+    modal.classList.remove("open");
 });
-
