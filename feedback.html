@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
 </head>
 <body>
     <div class="feedback">
         
           <h3> Get in Touch with us</h3>
           <br>
-          <p> Zephyr is only a message away. Wether you want
-             to share your feedback or share an amazing idea 
-             or product we are just a click away.</pre></p>
 
          <form>
                 <p> <label>Your Name<br> 
@@ -24,7 +22,7 @@
              </p>
 
         <p>
-            <label>Your Feedback<br>
+            <label>Your Feedback <br>
                 <textarea name="feedback" rows ="4" columns="40"></textarea>
             </label>
         </p>
@@ -35,8 +33,25 @@
         </p>
         </form>
         </div>
+        <  <dialog id="nativeDialog">
+        <p>Feedback sent successfully!</p>
+        <form method="dialog">
+            <!-- This button automatically closes the dialog -->
+            <button>OK</button>
+        </form>
+    </dialog>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sendBtn = document.getElementById('sendBtn');
+            const dialog = document.getElementById('nativeDialog');
+
+            sendBtn.addEventListener('click', () => {
+                // .showModal() creates the native "alert" behavior (dimmed background, centered)
+                dialog.showModal();
+            });
+        });
+    </script>
     
 </body>
 </html>
-
-
